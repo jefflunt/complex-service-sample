@@ -1,0 +1,11 @@
+type: web
+name: web-o-matic
+desc: the web app to end all web apps
+health_check: https / 200
+inbound:
+  - web_o_matic_whitelist
+outbound:
+  - https 0.0.0.0/0
+services:
+  - web_o_matic_postgres 1.2.3
+  - crt 2.3.4
